@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 
-const page = ({ params }) => {
+const HandlePage = ({ params }) => {
     const { handle } = React.use(params);
 
     const [bitTree, setBitTree] = useState(null);
@@ -70,7 +70,7 @@ const page = ({ params }) => {
                 <div className="w-full h-screen text-center">
                     <h1 className="text-6xl font-bold text-gray-800">404</h1>
                     <h2 className="text-2xl font-semibold text-gray-700 mt-4">Page Not Found</h2>
-                    <p className="text-gray-600 mt-2">The page you are looking for doesn't exist or has been moved.</p>
+                    <p className="text-gray-600 mt-2">The page you are looking for doesn&apos;t exist or has been moved.</p>
                     <div className="my-8">
                         <Image src="/404.png" alt="404 Image" width={400} height={300} className="mx-auto" />
                     </div>
@@ -81,4 +81,4 @@ const page = ({ params }) => {
     )
 }
 
-export default page
+export default HandlePage
