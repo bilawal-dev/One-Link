@@ -8,9 +8,9 @@ export async function GET(request, { params }) {
 
     const bitTree = await bitTreeModel.findOne({ userId });
 
-    // if (!bitTree) {
-    //     return Response.json({ success: false, message: 'BitTree With This Handle Does Not Exists!', bitTree });
-    // }
+    if (!bitTree) {
+        return Response.json({ success: false, message: 'BitTree With This Handle Does Not Exists!', bitTree });
+    }
 
     return Response.json({ success: true, message: 'BitTree Retreived', bitTree });
 };
