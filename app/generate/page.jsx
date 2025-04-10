@@ -88,7 +88,7 @@ const Generate = () => {
     useEffect(() => {
         async function isHandleAvailable() {
 
-            const response = await fetch(`http://localhost:3000/api/handle/${handle}`)
+            const response = await fetch(`/api/handle/${handle}`)
 
             const data = await response.json();
 
